@@ -24,9 +24,14 @@ else{
     .then(response => response.json())
     .then(apiData => {
       if(apiData) {
-        const {data: {name, weather, main, daily, current}} = apiData
+        console.log(apiData)
+        const data = []
+        apiData.daily.map((day,i) => {
+          data.push({time: day.dt, tempDay: day.temp.day, tempNight: day.temp.night, humidity: day.humidity, pressure: day.pressure, wind: day.wind_speed, weather: day.weather[0].main })
+        })
+        
         appCache.set(req.params.city, data);
-        res.json({result: true, data: apiData})
+        res.json({result: true, data: data})
       }
       else {
         res.json({result: false, error: 'city not found'})
