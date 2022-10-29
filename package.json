@@ -1,0 +1,26 @@
+{
+  "name": "weatherapp-part4-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.1",
+    "express": "~4.16.1",
+    "geoip-lite": "^1.4.6",
+    "isomorphic-fetch": "^3.0.0",
+    "mongoose": "^6.6.1",
+    "node-cache": "^5.1.2",
+    "node-fetch": "2",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "jest": "^28.0.1",
+    "jsdom": "^19.0.0",
+    "supertest": "^6.2.3"
+  }
+}
